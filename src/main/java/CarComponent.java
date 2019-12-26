@@ -1,6 +1,5 @@
 import dagger.Component;
-
-import javax.inject.Inject;
+import widgets.Car;
 
 @Component
 public interface CarComponent {
