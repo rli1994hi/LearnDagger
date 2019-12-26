@@ -9,12 +9,18 @@ import javax.inject.Inject;
 public class Car {
     private static final String TAG = "car";
 
-    private Engine engine;
+    /* Field injection: Runner has to do werid "carComponent.inject(this);" is because
+    field injection would not be triggered if there's no constructor injection. What we did
+    in Runner can be thought of we do injection manually.
+    Injection order: constructor -> field -> method
+     */
+    @Inject
+    Engine engine;
+
     private Wheel wheel;
 
     @Inject
-    public Car(Engine engine, Wheel wheel) {
-        this.engine = engine;
+    public Car(Wheel wheel) {
         this.wheel = wheel;
     }
 
