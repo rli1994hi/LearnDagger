@@ -2,9 +2,10 @@ package widgets;
 
 import javax.inject.Inject;
 
-public class Engine {
-    @Inject
-    public Engine() {
-
-    }
+public interface Engine {
+//    @Inject
+//    public Engine() {
+//
+//    }
+    void start();
 }
