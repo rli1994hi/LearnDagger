@@ -1,7 +1,8 @@
 import dagger.Component;
+import modules.CarModule;
 import widgets.Car;
 
-@Component
+@Component(modules = CarModule.class)
 public interface CarComponent {
 
     Car getCar();
