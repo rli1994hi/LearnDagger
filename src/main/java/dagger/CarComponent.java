@@ -5,6 +5,11 @@ import dagger.modules.CarModule;
 import dagger.modules.GasEngineModule;
 import widgets.Car;
 
+import javax.inject.Named;
+
+import static widgets.GasEngine.ENGINE_CAPACITY_NAME;
+import static widgets.GasEngine.HORSE_POWER_NAME;
+
 /* Remember to add EngineModules here */
 @Component(modules = {GasEngineModule.class, CarModule.class})
 public interface CarComponent {
@@ -30,7 +35,10 @@ public interface CarComponent {
          * https://dagger.dev/api/2.10/dagger/BindsInstance.html
          */
         @BindsInstance
-        Builder horsePower(int horsePower);
+        Builder horsePower(@Named(HORSE_POWER_NAME) int horsePower);
+
+        @BindsInstance
+        Builder engineCapacity(@Named(ENGINE_CAPACITY_NAME) int engineCapacity);
 
         /**
          * 3. Builder always needs a build to return the object it builds.

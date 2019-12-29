@@ -2,7 +2,6 @@ package Run;
 
 import dagger.CarComponent;
 import dagger.DaggerCarComponent;
-import dagger.modules.DieselEngineModule;
 import widgets.Car;
 
 import javax.inject.Inject;
@@ -19,6 +18,7 @@ public class Runner {
 
         CarComponent carComponent = DaggerCarComponent.builder()
                 .horsePower(321)
+                .engineCapacity(100)
                 .build();
 
 //        widgets.Car car = carComponent.getCar();
