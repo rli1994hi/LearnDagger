@@ -10,6 +10,9 @@ public class Runner {
     @Inject
     Car car; // widgets.Car cannot be private - it should be visible to Dagger
 
+    @Inject
+    Car car2;
+
     public void demo() {
         /* DaggerCarComponent cannot be used any more. It's only available if none of the module in the component
         * requires param. In our case the DieselEngineModule requires a param - This is how we can pass a run time
@@ -24,5 +27,7 @@ public class Runner {
 //        widgets.Car car = carComponent.getCar();
         carComponent.inject(this);
         car.dirve();
+        System.out.println(System.identityHashCode(car));
+        System.out.println(System.identityHashCode(car2));
     }
 }
