@@ -1,5 +1,7 @@
+package Run;
+
 /**
- * Runner would not be acceptable as an arg into CarComponent in the static main method.
+ * Run.Runner would not be acceptable as an arg into dagger.CarComponent in the static main method.
  * Created another class to demo the field injection.
  */
 public class FieldInjectionDemo {

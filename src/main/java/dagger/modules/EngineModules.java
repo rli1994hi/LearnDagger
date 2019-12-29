@@ -1,8 +1,8 @@
-package modules;
+package dagger.modules;
 
 import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
+import widgets.DieselEngine;
 import widgets.Engine;
 import widgets.GasEngine;
 
@@ -34,5 +34,5 @@ public abstract class EngineModules {
      *
      */
     @Binds
-    public abstract Engine bindEngine(GasEngine engine);
+    public abstract Engine bindEngine(DieselEngine engine);
 }

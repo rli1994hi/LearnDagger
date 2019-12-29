@@ -1,4 +1,4 @@
-package modules;
+package dagger.modules;
 
 import dagger.Module;
 import dagger.Provides;
