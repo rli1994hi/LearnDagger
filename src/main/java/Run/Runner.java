@@ -27,7 +27,24 @@ public class Runner {
 //        widgets.Car car = carComponent.getCar();
         carComponent.inject(this);
         car.dirve();
+        /* This time, since the Car and the component having the car are both marked as @Singleton
+        *  car will be the same object as car2
+        *
+        * Think about Singleton as a scope. We mark Car as singleton, and it's in the scope of CarComponent
+        */
         System.out.println(System.identityHashCode(car));
         System.out.println(System.identityHashCode(car2));
+
+        /* Some notes for singleton: Only works if the we get objects from the same component. So if we do: */
+        CarComponent carComponent2 = DaggerCarComponent.builder()
+                .horsePower(321)
+                .engineCapacity(100)
+                .build();
+        Car car3 = carComponent2.getCar();
+
+        /* The first two will print the same value, the third line will be different */
+        System.out.println(System.identityHashCode(car));
+        System.out.println(System.identityHashCode(car2));
+        System.out.println(System.identityHashCode(car3));
     }
 }

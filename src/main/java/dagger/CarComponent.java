@@ -6,11 +6,13 @@ import dagger.modules.GasEngineModule;
 import widgets.Car;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import static widgets.GasEngine.ENGINE_CAPACITY_NAME;
 import static widgets.GasEngine.HORSE_POWER_NAME;
 
 /* Remember to add EngineModules here */
+@Singleton
 @Component(modules = {GasEngineModule.class, CarModule.class})
 public interface CarComponent {
 

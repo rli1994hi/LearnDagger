@@ -4,7 +4,9 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
+@Singleton
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Car {
     private static final String TAG = "car";
