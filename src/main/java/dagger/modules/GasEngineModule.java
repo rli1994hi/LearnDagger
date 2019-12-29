@@ -14,7 +14,7 @@ import widgets.GasEngine;
  *
  */
 @Module
-public abstract class EngineModules {
+public abstract class GasEngineModule {
 //    @Provides
 //    public Engine provideEngine() {
 //        Engine engine = new GasEngine();
@@ -34,5 +34,5 @@ public abstract class EngineModules {
      *
      */
     @Binds
-    public abstract Engine bindEngine(DieselEngine engine);
+    public abstract Engine bindEngine(GasEngine engine);
 }

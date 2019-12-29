@@ -18,7 +18,7 @@ public class Runner {
 //        CarComponent carComponent = DaggerCarComponent.create();
 
         CarComponent carComponent = DaggerCarComponent.builder()
-                .dieselEngineModule(new DieselEngineModule(123))
+                .horsePower(321)
                 .build();
 
 //        widgets.Car car = carComponent.getCar();
