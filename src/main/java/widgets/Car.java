@@ -35,6 +35,7 @@ public class Car {
     }
 
     public void dirve() {
+        this.engine.start();
         System.out.println("Driving..");
     }
 }
