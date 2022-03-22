@@ -9,7 +9,7 @@ import javax.inject.Inject;
 public class Runner {
     @Inject
     Car car; // widgets.Car cannot be private - it should be visible to Dagger
-
+  
     @Inject
     Car car2;
 
